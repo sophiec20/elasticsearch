@@ -105,6 +105,12 @@ per pivot. The following groupings are supported:
 * {ref}/search-aggregations-bucket-composite-aggregation.html#_date_histogram[Date Histogram]
 --
 
+`max_page_search_size`::
+  (integer) Defines the initial page size to use for the composite aggregation 
+  for each checkpoint. This is dynamically adjusted to a lower value if circuit 
+  breaker exceptions are experienced. The default value is 500 then minimum is 
+  10 and the maximum is 10,000. 
+
 [[data-frame-transform-example]]
 ==== {api-examples-title}
 
